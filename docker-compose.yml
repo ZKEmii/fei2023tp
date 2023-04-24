@@ -14,7 +14,17 @@ services:
             
         ports: 
             - 8000:80
-               
+            
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        environment:
+            PGADMIN_DEFAULT_EMAIL: zkgaren@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: emi123
+        volumes:
+            - ./data/pgadmin:/var/lib/pgadmin:delegated
+        ports: 
+            - 8001:80        
+
     db:
         image: postgres:14-alpine
         environment:
