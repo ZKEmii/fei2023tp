@@ -11,6 +11,7 @@ services:
             DB_PASSWORD: pwakey
             DB_USER: pwauser
             DB_HOST: db
+            PHP_USER_ID: 1000
             PRODUCCION: 0
             
         ports: 
